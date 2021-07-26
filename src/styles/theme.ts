@@ -1,8 +1,9 @@
 import { DefaultTheme } from "styled-components";
 
 const theme: DefaultTheme = {
-  color: {
+  colors: {
     primary: "white",
+    green: "green",
   },
   fonts: {},
 };

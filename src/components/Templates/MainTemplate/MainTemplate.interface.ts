@@ -1,4 +1,4 @@
-export namespace IHome {
+export namespace IMainTemplate {
   export interface IProps {}
 }
 
