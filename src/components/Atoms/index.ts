@@ -1,1 +1,2 @@
-export { Test } from "./testAtoms";
+export { Buger } from "./Buger";
+export { Nav } from "./Nav";
