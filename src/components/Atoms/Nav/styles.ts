@@ -5,9 +5,9 @@ export const MenuBox = styled.div<IStyled>`
   display: flex;
   width: 100%;
   justify-content: space-between;
-  @media (max-width: 1080px) {
+  @media (max-width: 957px) {
     flex-flow: column nowrap;
-    background-color: "black";
+    background-color: #4d8b23;
     position: fixed;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     opacity: ${({ open }) => (open ? 1 : 0)};
@@ -28,7 +28,7 @@ export const TitleContainer = styled.div`
 
 export const InputContainer = styled.div`
   display: flex;
-  @media (max-width: 1080px) {
+  @media (max-width: 957px) {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -38,7 +38,7 @@ export const Menu = styled.ul`
   display: flex;
   align-items: center;
   padding-top: 5px;
-  @media (max-width: 1080px) {
+  @media (max-width: 957px) {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -49,33 +49,54 @@ export const MenuText = styled.li`
   a {
     font-size: 16px;
   }
-`;
-
-export const SearchContainer = styled.form`
-  @media (max-width: 1080px) {
-    input: none {
-
+  @media (max-width: 957px) {
+    padding-left: 20px;
+    padding-bottom: 30px;
+    a {
+      color: #eee;
+      font-size: 18px;
+    }
+    span {
+      color: #eee;
+      font-size: 18px;
+      cursor: pointer;
     }
   }
+`;
+
+export const SearchImage = styled.img`
+  position: relative;
+  top: 4px;
+  left: 30px;
+  width: 18px;
+  height: 18px;
+  z-index: 20px;
+`;
+
+export const SearchContainer = styled.form<IStyled>`
   input {
-    padding-left: 20px;
+    padding-left: 40px;
     width: 280px;
     height: 38px;
     border-radius: 25px;
     border: none;
     background-color: #f1f1f5;
+    font-size: 16px;
     :focus {
       outline: none;
     }
-    @media (max-width: 1220px) {
+    @media (max-width: 1235px) {
       width: 150px;
     }
+    @media (max-width: 957px) {
+      width: 250px;
+      margin-bottom: 30px;
   }
 `;
 
 export const SignContainer = styled.div`
   display: flex;
-  @media (max-width: 1080px) {
+  @media (max-width: 957px) {
     flex-direction: column;
   }
 `;
@@ -93,6 +114,14 @@ export const SignInContainer = styled.div`
     font-size: 18px;
     color: white;
   }
+  @media (max-width: 1106px) {
+    width: 90px;
+    height: 35px;
+    margin-left: 20px;
+    a {
+      font-size: 14px;
+    }
+  }
 `;
 
 export const SignUpContainer = styled.div`
@@ -108,4 +137,11 @@ export const SignUpContainer = styled.div`
     font-size: 18px;
     color: #4d8b23;
   }
+  @media (max-width: 1106px) {
+    width: 90px;
+    height: 35px;
+     margin-left: 20px;
+    a {
+      font-size: 14px;
+    }
 `;

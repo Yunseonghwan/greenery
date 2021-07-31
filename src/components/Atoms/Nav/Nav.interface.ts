@@ -10,4 +10,5 @@ export interface ISearch {
 
 export interface IStyled {
   open?: boolean;
+  toggle?: boolean;
 }

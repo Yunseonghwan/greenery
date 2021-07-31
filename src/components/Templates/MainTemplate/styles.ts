@@ -21,4 +21,10 @@ export const MainTitle = styled.div`
     font-size: 36px;
     font-weight: bold;
   }
+  @media (max-width: 1106px) {
+    padding-right: 60px;
+    a {
+      font-size: 28px;
+    }
+  }
 `;
