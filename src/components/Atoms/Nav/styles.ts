@@ -7,7 +7,7 @@ export const MenuBox = styled.div<IStyled>`
   justify-content: space-between;
   @media (max-width: 957px) {
     flex-flow: column nowrap;
-    background-color: #4d8b23;
+    background-color: rgba(0, 82, 48, 0.5);
     position: fixed;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     opacity: ${({ open }) => (open ? 1 : 0)};
@@ -53,11 +53,11 @@ export const MenuText = styled.li`
     padding-left: 20px;
     padding-bottom: 30px;
     a {
-      color: #eee;
+      color: #444;
       font-size: 18px;
     }
     span {
-      color: #eee;
+      color: #444;
       font-size: 18px;
       cursor: pointer;
     }

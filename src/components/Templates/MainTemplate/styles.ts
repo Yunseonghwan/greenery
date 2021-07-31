@@ -9,10 +9,13 @@ export const HeaderContainer = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
+  position: fixed;
+  z-index: 100;
   max-width: 1690px;
   width: 100%;
   height: 80px;
   padding: 0 40px;
+  background-color: white;
 `;
 
 export const MainTitle = styled.div`
