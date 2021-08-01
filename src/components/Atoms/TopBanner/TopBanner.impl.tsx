@@ -1,6 +1,6 @@
 import React from "react";
 import { ITopBanner } from "./TopBanner.interface";
-import TopBannerImg from "../../../assets/images/topBanner.png";
+import TopBannerImg from "../../../assets/Images/topBanner.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";

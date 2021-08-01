@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
 export const CardData = styled.div`
-  width: 500px;
   display: flex;
   height: 609px;
   justify-content: center;
   align-items: center;
+`;
+
+export const Content = styled.div`
+  width: 990px;
   overflow: hidden;
+  display: flex;
 `;
 
 export const CardContainer = styled.div`
@@ -45,9 +49,10 @@ export const Arrow = styled.div`
   height: 36px;
   border: 1px solid #707070;
   border-radius: 36px;
+  cursor: pointer;
   span {
     font-size: 22px;
-    padding-top: 5px;
+
     color: #707070;
   }
 `;

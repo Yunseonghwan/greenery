@@ -11,10 +11,10 @@ export const HeaderContainer = styled.div`
   align-items: center;
   position: fixed;
   z-index: 100;
-  max-width: 1690px;
+  // max-width: 1690px;
   width: 100%;
   height: 80px;
-  padding: 0 40px;
+  padding: 0 30px;
   background-color: white;
 `;
 
