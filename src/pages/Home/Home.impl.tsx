@@ -4,6 +4,7 @@ import MainTemplate from "../../components/Templates/MainTemplate";
 import { TopBanner } from "../../components/Atoms";
 import ContentTemplate from "../../components/Templates/ContentTemplate";
 import TopBannerImg from "../../assets/Images/topBanner.png";
+
 import {
   Arrow,
   Card,
@@ -13,6 +14,7 @@ import {
   MagzineTitle,
   UserName,
   CardSlider,
+  BtnContainer,
 } from "./styles";
 
 const Home: React.FC<IHome.IProps> = () => {
@@ -46,24 +48,9 @@ const Home: React.FC<IHome.IProps> = () => {
       name: "name4",
     },
   ];
-  const [properties, setProperties] = useState<any>(bannerData);
-  const [property, setProperty] = useState<any>(bannerData[1]);
+  const [contentData, setContentData] = useState<any>(bannerData);
+  const [currentContent, setCurrentContent] = useState<number>(2);
 
-  const nextProperty = () => {
-    const newIndex = property.index + 1;
-    if (property.index === properties.length - 1) {
-      return false;
-    }
-    setProperty(properties[newIndex]);
-  };
-
-  const prevProperty = () => {
-    const newIndex = property.index - 1;
-    setProperty(properties[newIndex]);
-    if (property.index === 0) {
-      return 0;
-    }
-  };
   return (
     <MainTemplate>
       <TopBanner />
@@ -72,55 +59,28 @@ const Home: React.FC<IHome.IProps> = () => {
         addText="그리너리 매거진 더 보러 가기"
       >
         <CardData>
-          <Content
-            style={
-              property.index && {
-                opacity: 1,
-                transform: "scale(1)",
-                backgroundColor: "#f3f3f3",
-                borderColor: "#f3f3f3",
-              }
-            }
-          >
-            <CardSlider
-              style={{
-                transform: `translateX(-${
-                  property.index * (100 / properties.length)
-                }%)`,
-              }}
-            >
-              {properties.map((item: any) => (
-                <CardContainer
-                  key={item.id}
-                  id={item.index}
-                  style={
-                    property.index && {
-                      opacity: 1,
-                      transform: "scale(1)",
-                      backgroundColor: "#f3f3f3",
-                      borderColor: "#f3f3f3",
-                    }
-                  }
-                >
-                  <Card src={item.image} />
-                  <MagzineTitle>
-                    <span>{item.title}</span>
-                  </MagzineTitle>
-                  <UserName>
-                    <span>{item.name}</span>
-                  </UserName>
-                </CardContainer>
-              ))}
-            </CardSlider>
-          </Content>
+          <BtnContainer>
+            <Arrow>
+              <span>&lt;</span>
+            </Arrow>
+            <Arrow>
+              <span>&gt;</span>
+            </Arrow>
+          </BtnContainer>
+
+          {contentData.map((item: any) => (
+            <CardContainer key={item.id} id={item.index}>
+              <Card src={item.image} />
+              <MagzineTitle>
+                <span>{item.title}</span>
+              </MagzineTitle>
+              <UserName>
+                <span>{item.name}</span>
+              </UserName>
+            </CardContainer>
+          ))}
         </CardData>
       </ContentTemplate>
-      <Arrow onClick={nextProperty}>
-        <span>&gt;</span>
-      </Arrow>
-      <Arrow onClick={prevProperty}>
-        <span>&lt;</span>
-      </Arrow>
     </MainTemplate>
   );
 };

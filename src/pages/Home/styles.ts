@@ -1,77 +1,12 @@
 import styled from "styled-components";
 
-export const CardData = styled.div`
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  height: 609px;
-  position: relative;
-  &:before &:after {
-    content: "";
-    display: block;
-    width: 50%;
-    height: 120%;
-    background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 1) 15%,
-      rgba(255, 255, 255, 0.5) 100%
-    );
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-  }
-  &:after {
-    left: auto;
-    right: 0;
-    background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 1) 15%,
-      rgba(255, 255, 255, 0.5) 100%
-    );
-  }
-`;
+export const CardData = styled.div``;
 
-export const Content = styled.div`
-  position: relative;
-  max-width: 226px;
-  margin: 0 auto;
+export const Content = styled.div``;
 
-  &:after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 264px;
-    outline: 5px solid #61dafb;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-`;
+export const CardSlider = styled.div``;
 
-export const CardSlider = styled.div`
-  display: flex;
-  position: absolute;
-  transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  .card {
-    flex: 1;
-    min-width: 200px;
-    opacity: 0.5;
-    transform: scale(0.7);
-    transition: opacity 300ms linear, border-color 300ms linear,
-      background-color 300ms linear,
-      transform 300ms cubic-bezier(0.455, 0.04, 0.515, 0.955);
-    .details {
-      opacity: 0;
-      transition: opacity 150ms linear;
-    }
-  }
-`;
-
-export const CardContainer = styled.div`
-  margin-right: 15px;
-  margin-left: 15px;
-`;
+export const CardContainer = styled.div``;
 
 export const Card = styled.img`
   width: 276px;
@@ -94,6 +29,22 @@ export const UserName = styled.div`
     line-height: 22px;
     color: #767676;
   }
+`;
+
+export const BtnContainer = styled.div`
+  padding: 0;
+  font-size: 20px;
+  text-align: center;
+  color: #b3b3b3;
+  width: 45px;
+  height: 100%;
+  border: 0;
+  cursor: pointer;
+  background: none;
+  outline: none;
+  position: absolute;
+  z-index: 999;
+  transition: all 0.6s ease 0s;
 `;
 
 export const Arrow = styled.div`
