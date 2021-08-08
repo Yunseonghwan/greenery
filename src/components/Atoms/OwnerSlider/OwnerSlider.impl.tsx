@@ -5,6 +5,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+const MagzineContainer = styled.div`
+  width: 1194px;
+  height: 609px;
+  /* padding: 0 50px; */
+`;
+
 const PrevArrowButton = styled.div`
   display: flex;
   justify-content: center;
@@ -16,7 +22,7 @@ const PrevArrowButton = styled.div`
   cursor: pointer;
   position: absolute;
   top: 40%;
-  left: 0px;
+  left: 50px;
   z-index: 100;
 `;
 
@@ -31,23 +37,26 @@ const NextArrowButton = styled.div`
   cursor: pointer;
   position: absolute;
   top: 40%;
-  right: 0px;
+  right: 50px;
   z-index: 100;
 `;
 
 const CardSlider = styled.div`
   display: flex;
-  justify-content: center;
-  //   align-items: center;
+  align-items: center;
+  flex-direction: column;
 `;
 
-const CardContainer = styled.div``;
+const CardContainer = styled.div`
+  display: flex;
+`;
 
 const Card = styled.img<IOwnerSliderStyles>`
   width: ${({ imageIndex, idx }) => (idx === imageIndex ? "378px" : "276px")};
   height: ${({ imageIndex, idx }) => (idx === imageIndex ? "526px" : "384px")};
-  transition: 300ms;
+  transition: 500ms;
   margin-bottom: 20px;
+  margin-top: ${({ imageIndex, idx }) => idx !== imageIndex && "60px"};
 `;
 
 const MagzineTitle = styled.div<IOwnerSliderStyles>`
@@ -87,13 +96,11 @@ export const OwnerSlider: React.FC<IOwnerSlider.IProps> = ({ contentData }) => {
     );
   };
 
-  // 3.
-
   const settings = {
     centerMode: true,
     infinite: true,
     dots: false,
-    speed: 300,
+    speed: 500,
     slidesToShow: 3,
     centerPadding: "0",
     swipeToSlide: true,
@@ -119,20 +126,22 @@ export const OwnerSlider: React.FC<IOwnerSlider.IProps> = ({ contentData }) => {
     ],
   };
   return (
-    <Slider {...settings}>
-      {contentData.map((item: any, idx: number) => (
-        <CardContainer key={item.id}>
-          <CardSlider>
-            <Card src={item.image} imageIndex={imageIndex} idx={idx} />
-            <MagzineTitle imageIndex={imageIndex} idx={idx}>
-              <span>{item.title}</span>
-            </MagzineTitle>
-            <UserName imageIndex={imageIndex} idx={idx}>
-              <span>{item.name}</span>
-            </UserName>
-          </CardSlider>
-        </CardContainer>
-      ))}
-    </Slider>
+    <MagzineContainer>
+      <Slider {...settings}>
+        {contentData.map((item: any, idx: number) => (
+          <CardContainer>
+            <CardSlider key={item.id}>
+              <Card src={item.image} imageIndex={imageIndex} idx={idx} />
+              <MagzineTitle imageIndex={imageIndex} idx={idx}>
+                <span>{item.title}</span>
+              </MagzineTitle>
+              <UserName imageIndex={imageIndex} idx={idx}>
+                <span>{item.name}</span>
+              </UserName>
+            </CardSlider>
+          </CardContainer>
+        ))}
+      </Slider>
+    </MagzineContainer>
   );
 };

@@ -12,11 +12,6 @@ export const Container = styled.div`
   margin-bottom: 30px;
 `;
 
-export const MagzineContainer = styled.div`
-  max-width: 1194px;
-  height: 609px;
-`;
-
 export const ContentContainer = styled.div`
   display: flex;
   // max-width: 1394px;

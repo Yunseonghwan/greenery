@@ -7,7 +7,6 @@ import {
   ContentContainer,
   ContentTitle,
   Magzine,
-  MagzineContainer,
   Title,
 } from "./styles";
 
@@ -28,9 +27,7 @@ const ContentTemplate: React.FC<IContentTemplate.IProps> = ({
           </AddButton>
         </ContentContainer>
       </Container>
-      <Container>
-        <MagzineContainer>{children}</MagzineContainer>
-      </Container>
+      <Container>{children}</Container>
     </Magzine>
   );
 };
