@@ -10,11 +10,13 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   margin-bottom: 30px;
+  @media (max-width: 1250px) {
+    padding: 0 20px;
+  }
 `;
 
 export const ContentContainer = styled.div`
   display: flex;
-  // max-width: 1394px;
   max-width: 1194px;
   justify-content: space-between;
   align-items: center;
