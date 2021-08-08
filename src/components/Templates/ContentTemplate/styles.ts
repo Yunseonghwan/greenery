@@ -10,21 +10,19 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   margin-bottom: 30px;
-  padding: 0 40px;
 `;
 
 export const MagzineContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: 0 40px;
+  max-width: 1194px;
+  height: 609px;
 `;
 
 export const ContentContainer = styled.div`
   display: flex;
+  // max-width: 1394px;
+  max-width: 1194px;
   justify-content: space-between;
   align-items: center;
-  max-width: 1394px;
   width: 100%;
   height: 54px;
 `;

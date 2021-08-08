@@ -28,7 +28,9 @@ const ContentTemplate: React.FC<IContentTemplate.IProps> = ({
           </AddButton>
         </ContentContainer>
       </Container>
-      <MagzineContainer>{children}</MagzineContainer>
+      <Container>
+        <MagzineContainer>{children}</MagzineContainer>
+      </Container>
     </Magzine>
   );
 };
