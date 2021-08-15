@@ -1,19 +1,14 @@
 import React, { useState } from "react";
 import { IHome } from "./Home.interface";
 import MainTemplate from "../../components/Templates/MainTemplate";
-import { OwnerSlider, TopBanner } from "../../components/Atoms";
+import {
+  OwnerSlider,
+  Popular,
+  Recommend,
+  TopBanner,
+} from "../../components/Atoms";
 import ContentTemplate from "../../components/Templates/ContentTemplate";
 import TopBannerImg from "../../assets/Images/topBanner.png";
-import {
-  Container,
-  MagzineTitle,
-  MainImage,
-  MainMagzineContainer,
-  UserImage,
-  UserMagzine,
-  UserMagzineContainer,
-  UserName,
-} from "./styles";
 
 const Home: React.FC<IHome.IProps> = () => {
   const bannerData: any = [
@@ -59,32 +54,15 @@ const Home: React.FC<IHome.IProps> = () => {
       </ContentTemplate>
       <ContentTemplate
         title="오늘의 추천 글"
-        addText="사용자 매거진 더 보러 가기"
+        addText="사용자 매거진 더 보러 가기"
       >
-        <Container>
-          <MainMagzineContainer>
-            <MainImage src={TopBannerImg} />
-            <MagzineTitle>
-              <span>title</span>
-            </MagzineTitle>
-            <UserName>
-              <span>name</span>
-            </UserName>
-          </MainMagzineContainer>
-          <UserMagzineContainer>
-            {contentData.map((item: any) => (
-              <UserMagzine>
-                <UserImage src={item.image} />
-                <MagzineTitle>
-                  <span>{item.title}</span>
-                </MagzineTitle>
-                <UserName>
-                  <span>{item.title}</span>
-                </UserName>
-              </UserMagzine>
-            ))}
-          </UserMagzineContainer>
-        </Container>
+        <Recommend />
+      </ContentTemplate>
+      <ContentTemplate
+        title="오늘의 인기 커뮤니티 글"
+        addText="커뮤니티 글 더 보러 가기"
+      >
+        <Popular />
       </ContentTemplate>
     </MainTemplate>
   );

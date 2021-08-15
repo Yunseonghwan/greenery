@@ -6,11 +6,14 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
   background-color: white;
 `;
 
 const HeaderContainer = styled.div`
   margin: 0 auto;
+  max-width: 1920px;
   display: flex;
   align-items: center;
   position: fixed;

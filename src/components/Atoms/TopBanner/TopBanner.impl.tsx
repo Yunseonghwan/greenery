@@ -9,7 +9,9 @@ import styled from "styled-components";
 
 const TopBannerImage = styled.img`
   width: 100%;
-  height: 900px;
+  max-width: 1920px;
+  height: 100%;
+  min-height: 300px;
   resize-mode: contain;
 `;
 
