@@ -64,7 +64,7 @@ export const Nav: React.FC<INav.IProps> = ({ open }) => {
             </>
           )}
           <MenuText>
-            <Link to="/">Magzine</Link>
+            <Link to="/magzine">Magzine</Link>
           </MenuText>
           <MenuText>
             <Link to="/">Community</Link>

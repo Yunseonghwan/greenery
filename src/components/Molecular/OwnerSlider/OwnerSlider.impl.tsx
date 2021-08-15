@@ -15,36 +15,6 @@ const MagzineContainer = styled.div`
   }
 `;
 
-// const PrevArrowButton = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 36px;
-//   height: 36px;
-//   border: 1px solid #707070;
-//   border-radius: 36px;
-//   cursor: pointer;
-//   position: absolute;
-//   top: 40%;
-//   left: 0;
-//   z-index: 100;
-// `;
-
-// const NextArrowButton = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 36px;
-//   height: 36px;
-//   border: 1px solid #707070;
-//   border-radius: 36px;
-//   cursor: pointer;
-//   position: absolute;
-//   top: 40%;
-//   right: 0;
-//   z-index: 100;
-// `;
-
 const CardSlider = styled.div`
   display: flex;
   align-items: center;
@@ -99,22 +69,6 @@ word-break: break-all;
 export const OwnerSlider: React.FC<IOwnerSlider.IProps> = ({ contentData }) => {
   const [imageIndex, setImageIndex] = useState<number>(0);
 
-  // const NextArrow = ({ onClick }: any) => {
-  //   return (
-  //     <NextArrowButton onClick={onClick}>
-  //       <span>&gt;</span>
-  //     </NextArrowButton>
-  //   );
-  // };
-
-  // const PrevArrow = ({ onClick }: any) => {
-  //   return (
-  //     <PrevArrowButton onClick={onClick}>
-  //       <span>&lt;</span>
-  //     </PrevArrowButton>
-  //   );
-  // };
-
   const settings = {
     centerMode: true,
     infinite: true,
@@ -124,8 +78,6 @@ export const OwnerSlider: React.FC<IOwnerSlider.IProps> = ({ contentData }) => {
     centerPadding: "0",
     swipeToSlide: true,
     focusOnSelect: true,
-    // nextArrow: <NextArrow onClick />,
-    // prevArrow: <PrevArrow onClick />,
     beforeChange: (current: any, next: any) => setImageIndex(next),
     responsive: [
       {

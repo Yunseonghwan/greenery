@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { IMainTemplate } from "./MainTemplate.interface";
-import { Buger } from "../../Atoms";
+import { Buger } from "../../Molecular";
 import styled from "styled-components";
 
 const Container = styled.div`

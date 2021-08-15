@@ -1,16 +1,12 @@
 import React, { useState } from "react";
-import { IHome } from "./Home.interface";
+import { IMagzine } from "./Magzine.interface";
 import MainTemplate from "../../components/Templates/MainTemplate";
-import {
-  OwnerSlider,
-  Popular,
-  Recommend,
-  TopBanner,
-} from "../../components/Molecular";
+import { OwnerSlider, Recommend } from "../../components/Molecular";
 import ContentTemplate from "../../components/Templates/ContentTemplate";
 import TopBannerImg from "../../assets/Images/topBanner.png";
+import styled from "styled-components";
 
-const Home: React.FC<IHome.IProps> = () => {
+const Magzine: React.FC<IMagzine.IProps> = () => {
   const bannerData: any = [
     {
       id: 1,
@@ -45,27 +41,24 @@ const Home: React.FC<IHome.IProps> = () => {
 
   return (
     <MainTemplate>
-      <TopBanner />
       <ContentTemplate
-        title="이달의 그리너리 매거진"
+        title="그리너리 오리지널 컨텐츠"
         addText="그리너리 매거진 더 보러 가기"
       >
         <OwnerSlider contentData={contentData} />
       </ContentTemplate>
       <ContentTemplate
-        title="오늘의 추천 글"
+        title="사용자 컨텐츠"
         addText="사용자 매거진 더 보러 가기"
       >
         <Recommend />
       </ContentTemplate>
       <ContentTemplate
-        title="오늘의 인기 커뮤니티 글"
-        addText="커뮤니티 글 더 보러 가기"
-      >
-        <Popular />
-      </ContentTemplate>
+        title="새로 등록된 글"
+        addText="사용자 매거진 더 보러 가기"
+      ></ContentTemplate>
     </MainTemplate>
   );
 };
 
-export default Home;
+export default Magzine;
