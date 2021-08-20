@@ -1,11 +1,11 @@
 import React from "react";
-import { ITopBanner } from "./TopBanner.interface";
-import TopBannerImg from "../../../assets/Images/topBanner.png";
+import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
-import styled from "styled-components";
+import { ITopBanner } from "./TopBanner.interface";
+import TopBannerImg from "../../../assets/Images/topBanner.png";
 
 const TopBannerImage = styled.img`
   width: 100%;

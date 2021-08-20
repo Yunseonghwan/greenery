@@ -4,7 +4,7 @@ import MainTemplate from "../../components/Templates/MainTemplate";
 import { OwnerSlider, Recommend } from "../../components/Molecular";
 import ContentTemplate from "../../components/Templates/ContentTemplate";
 import TopBannerImg from "../../assets/Images/topBanner.png";
-import styled from "styled-components";
+import { MagzineSearch } from "../../components/Molecular/MagzineSearch";
 
 const Magzine: React.FC<IMagzine.IProps> = () => {
   const bannerData: any = [
@@ -41,6 +41,7 @@ const Magzine: React.FC<IMagzine.IProps> = () => {
 
   return (
     <MainTemplate>
+      <MagzineSearch />
       <ContentTemplate
         title="그리너리 오리지널 컨텐츠"
         addText="그리너리 매거진 더 보러 가기"
